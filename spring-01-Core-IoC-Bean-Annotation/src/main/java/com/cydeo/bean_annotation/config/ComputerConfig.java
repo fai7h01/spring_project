@@ -19,6 +19,11 @@ public class ComputerConfig {
         return new SonyMonitor("27 Inch Beast", "Sony", 27);
     }
 
+    @Bean(name = "sony2")
+    public Monitor monitorSony2(){
+        return new SonyMonitor("40 Inch Beast", "Sony", 40);
+    }
+
     @Bean
     @Primary
     public Monitor monitorAcer(){
