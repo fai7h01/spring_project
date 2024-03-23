@@ -1,10 +1,9 @@
-package com.cydeo;
+package com.cydeo.stereotype_annotation;
 
-import com.cydeo.casefactory.Case;
-import com.cydeo.monitorfactory.Monitor;
-import com.cydeo.motherboardfactory.Motherboard;
+import com.cydeo.stereotype_annotation.casefactory.Case;
+import com.cydeo.stereotype_annotation.monitorfactory.Monitor;
+import com.cydeo.stereotype_annotation.motherboardfactory.Motherboard;
 import lombok.Getter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Getter

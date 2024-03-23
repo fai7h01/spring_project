@@ -1,4 +1,4 @@
-package com.cydeo.casefactory;
+package com.cydeo.stereotype_annotation.casefactory;
 
 
 import lombok.AllArgsConstructor;

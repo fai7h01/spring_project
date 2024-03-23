@@ -1,4 +1,4 @@
-package com.cydeo.monitorfactory;
+package com.cydeo.stereotype_annotation.monitorfactory;
 
 import lombok.Getter;
 import lombok.Setter;

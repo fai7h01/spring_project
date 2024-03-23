@@ -1,7 +1,6 @@
-package com.cydeo.casefactory;
+package com.cydeo.stereotype_annotation.casefactory;
 
 import lombok.Getter;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Getter

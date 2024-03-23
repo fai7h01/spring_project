@@ -1,4 +1,4 @@
-package com.cydeo.motherboardfactory;
+package com.cydeo.stereotype_annotation.motherboardfactory;
 
 import lombok.Getter;
 

@@ -1,6 +1,6 @@
-package com.cydeo;
+package com.cydeo.stereotype_annotation;
 
-import com.cydeo.config.PcConfig;
+import com.cydeo.stereotype_annotation.config.PcConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -11,6 +11,8 @@ public class ComputerTest {
 
         PC pc = container.getBean(PC.class);
         System.out.println(pc.getTheCase().getDimensions().getDepth());
+
+
 
     }
 }
