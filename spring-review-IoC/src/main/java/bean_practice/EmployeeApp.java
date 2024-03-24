@@ -16,8 +16,10 @@ public class EmployeeApp {
         employee1.createAccount();
 
         String message = container.getBean("message",String.class);
+        String randomText = container.getBean("randomText",String.class);
 
         System.out.println(message);
+        System.out.println(randomText);
 
 
 
