@@ -6,7 +6,7 @@ import stereotype_annotations.config.Config;
 import stereotype_annotations.model.DataStructure;
 import stereotype_annotations.model.Microservice;
 
-public class Test {
+public class CourseApp {
     public static void main(String[] args) {
 
         ApplicationContext container = new AnnotationConfigApplicationContext(Config.class);
