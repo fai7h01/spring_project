@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class DataStructure{
 
-    ExtraHours extraHours;
+    private ExtraHours extraHours;
 
     public void getTotalHours() {
         System.out.println("Total hours: " + (35 + extraHours.getHours()));
