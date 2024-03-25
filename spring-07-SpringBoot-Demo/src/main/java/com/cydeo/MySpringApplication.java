@@ -21,6 +21,7 @@ public class MySpringApplication {
 		commentService.publishComment(comment);
 
 		commentService.printConfigData();
+		commentService.printDBConfigData();
 
 	}
 
