@@ -11,4 +11,18 @@ public class HomeController {
         return "home.html";
     }
 
+    @RequestMapping("/luka")
+    public String home2(){
+        return "home.html";
+    }
+
+    @RequestMapping
+    public String home3(){
+        return "home.html";
+    }
+    @RequestMapping({"/apple", "/orange"})
+    public String home4(){
+        return "home.html";
+    }
+
 }
