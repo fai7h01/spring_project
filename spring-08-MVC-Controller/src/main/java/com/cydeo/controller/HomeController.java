@@ -20,6 +20,7 @@ public class HomeController {
     public String home3(){
         return "home.html";
     }
+
     @RequestMapping({"/apple", "/orange"})
     public String home4(){
         return "home.html";
