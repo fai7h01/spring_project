@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CarController {
 
     //localhost:8080/info?make=Audi
-    @RequestMapping("/info")
+    @RequestMapping("/info") // --> describing end point
     public String carInfo(@RequestParam String make, Model model){
 
         model.addAttribute("make",make);
