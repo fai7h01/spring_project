@@ -7,13 +7,13 @@
 <body>
 
 <div align="center">
-<form>
+<form th:object="${mentor}">
 
     <label>First Name</label>
-    <input type="text"><br>
+    <input type="text" th:field="*{firstName}"><br>
 
     <label>Last Name</label>
-    <input type="text"><br>
+    <input type="text" th:field="*{lastName}"><br>
 
 
 </form>
