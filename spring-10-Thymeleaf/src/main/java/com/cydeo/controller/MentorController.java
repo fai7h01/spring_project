@@ -31,9 +31,11 @@ public class MentorController {
 
         //return "mentor/mentor-confirmation";
 
-        model.addAttribute("mentor", new Mentor());
+        //model.addAttribute("mentor", new Mentor());
 
-        return "mentor/mentor-register";
+        //return "mentor/mentor-register";
+
+        return "redirect:/mentor/register";
     }
 
 }
