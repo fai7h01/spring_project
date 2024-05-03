@@ -30,5 +30,9 @@ public class Student {
     private LocalDateTime birthDateTime;
 
     @Enumerated(EnumType.STRING)
+   // @Enumerated(EnumType.ORDINAL)
     private Gender gender;
+
+    @Transient
+    private String city;
 }
