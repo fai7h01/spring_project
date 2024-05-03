@@ -1,8 +1,8 @@
 insert into EMPLOYEES(id,name)
 values (1,'Mike');
 
-insert into student(id,first_name,last_name,email)
-values (1,'Luka','Faith','lv@gmail.com');
+insert into students(first_name,last_name,email)
+values ('Luka','Faith','lv@gmail.com');
 
-insert into student(id,first_name,last_name,email)
-values (2,'Roger','Penrose','rp@gmail.com');
+insert into students(first_name,last_name,email)
+values ('Roger','Penrose','rp@gmail.com');
