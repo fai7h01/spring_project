@@ -1,6 +1,5 @@
 package com.cydeo.entity;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +23,7 @@ public class Merchant {
     private BigDecimal commissionRate;
     private Integer payoutDelayCount;
 
-    @OneToMany
+    @OneToMany(mappedBy = "merchant") // in OneToMany relationship ownership belongs to many side
     private List<Payment> payments;
 
     public Merchant(String name, String code, BigDecimal transactionFee, BigDecimal commissionRate, Integer payoutDelayCount) {
