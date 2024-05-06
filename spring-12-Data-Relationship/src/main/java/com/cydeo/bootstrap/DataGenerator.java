@@ -2,10 +2,7 @@ package com.cydeo.bootstrap;
 
 import com.cydeo.entity.*;
 import com.cydeo.enums.Status;
-import com.cydeo.repository.CartRepository;
-import com.cydeo.repository.ItemRepository;
-import com.cydeo.repository.MerchantRepository;
-import com.cydeo.repository.PaymentRepository;
+import com.cydeo.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -20,12 +17,14 @@ public class DataGenerator implements CommandLineRunner {
     private final MerchantRepository merchantRepository;
     private final ItemRepository itemRepository;
     private final CartRepository cartRepository;
+    private final CustomerRepository customerRepository;
 
-    public DataGenerator(PaymentRepository paymentRepository, MerchantRepository merchantRepository, ItemRepository itemRepository, CartRepository cartRepository) {
+    public DataGenerator(PaymentRepository paymentRepository, MerchantRepository merchantRepository, ItemRepository itemRepository, CartRepository cartRepository, CustomerRepository customerRepository) {
         this.paymentRepository = paymentRepository;
         this.merchantRepository = merchantRepository;
         this.itemRepository = itemRepository;
         this.cartRepository = cartRepository;
+        this.customerRepository = customerRepository;
     }
 
 
@@ -46,6 +45,15 @@ public class DataGenerator implements CommandLineRunner {
 
         payment1.setMerchant(merchant1);
         payment2.setMerchant(merchant1);
+
+        Customer customer1 = new Customer("Mike","Smith","mk01","Barkley St","mike@gmail.com");
+        Customer customer2 = new Customer("John","Doe","jd02","Main St","john@gmail.com");
+
+        customerRepository.save(customer1);
+        customerRepository.save(customer2);
+
+        payment1.setCustomer(customer1);
+        payment2.setCustomer(customer2);
 
         Item item1 = new Item("Milk","M01");
         Item item2 = new Item("Sugar","S01");
