@@ -65,6 +65,9 @@ public class DataGenerator implements CommandLineRunner {
         cart1.setItemList(Arrays.asList(item1,item2,item3));
         cart2.setItemList(Arrays.asList(item1,item2));
 
+        payment1.setCart(cart1);
+        payment2.setCart(cart2);
+
         itemRepository.save(item1);
         itemRepository.save(item2);
         itemRepository.save(item3);
