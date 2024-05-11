@@ -21,11 +21,11 @@ public class Employee extends BaseEntity {
     private Gender gender;
     private Integer salary;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "department")
     private Department department;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Region region;
 
 }

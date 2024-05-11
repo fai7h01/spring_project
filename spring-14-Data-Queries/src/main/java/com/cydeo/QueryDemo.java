@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import com.cydeo.repository.DepartmentRepository;
+import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -12,6 +13,7 @@ public class QueryDemo implements CommandLineRunner {
 
     private final RegionRepository regionRepository;
     private final DepartmentRepository departmentRepository;
+    private final EmployeeRepository employeeRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -29,5 +31,9 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findByDivision: " + departmentRepository.findByDivision("Health"));
         System.out.println("findByDivisionEndsWith: " + departmentRepository.findByDivisionEndsWith("ics"));
         System.out.println("findDistinctTop2ByDivisionContains: " + departmentRepository.findDistinctTop2ByDivisionContains("Hea"));
+
+        System.out.println("----------------------EMPLOYEES----------------------");
+        System.out.println("findByEmail: " + employeeRepository.findByEmail("bmanueau0@dion.ne.jp"));
+        System.out.println("findByFirstNameAndLastNameOrEmail: " + employeeRepository.findByFirstNameAndLastNameOrEmail("Seline", "Dubber", "acurwood6@1und1.de"));
     }
 }
