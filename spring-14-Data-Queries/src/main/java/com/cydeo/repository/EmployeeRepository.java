@@ -15,5 +15,13 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
     List<Employee> findByFirstNameAndLastNameOrEmail(String firstName, String lastName, String email);
 
     //Display all employees that first name is not ""
-    List<Employee> findByFirstNameIsFalse(String firstName);
+    List<Employee> findByFirstNameIsNot(String firstName);
+
+    //Display all employees where last name starts with ""
+    List<Employee> findByLastNameStartsWith(String pattern);
+
+    //Display all employees with salaries higher than ""
+    //Display all employees with salaries less than ""
+    List<Employee> findBySalaryIsGreaterThan(Integer salary);
+    List<Employee> findBySalaryIsLessThan(Integer salary);
 }
