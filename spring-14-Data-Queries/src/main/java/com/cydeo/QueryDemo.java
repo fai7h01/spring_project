@@ -38,5 +38,7 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findBySalaryIsGreaterThan" + employeeRepository.findBySalaryIsGreaterThan(100000));
         System.out.println("findBySalaryIsGreaterThanEqualOrderBySalary: " + employeeRepository.findBySalaryIsGreaterThanEqualOrderBySalary(120000));
         System.out.println("findByEmailIsNull: " + employeeRepository.findByEmailIsNull());
+
+        System.out.println("retrieveEmployeeDetail: " + employeeRepository.retrieveEmployeeDetail());
     }
 }
