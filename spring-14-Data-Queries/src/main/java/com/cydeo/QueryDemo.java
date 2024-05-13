@@ -44,5 +44,6 @@ public class QueryDemo implements CommandLineRunner {
 
         System.out.println("----------------------COURSES----------------------");
         System.out.println("findByCategory: " + courseRepository.findByCategory("Spring"));
+        System.out.println("countByCategory: " + courseRepository.countByCategory("Spring"));
     }
 }
