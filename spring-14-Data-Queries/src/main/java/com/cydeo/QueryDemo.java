@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+
 @Component
 @AllArgsConstructor
 public class QueryDemo implements CommandLineRunner {
@@ -33,6 +35,7 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findByDivision: " + departmentRepository.findByDivision("Health"));
         System.out.println("findByDivisionEndsWith: " + departmentRepository.findByDivisionEndsWith("ics"));
         System.out.println("findDistinctTop2ByDivisionContains: " + departmentRepository.findDistinctTop2ByDivisionContains("Hea"));
+        System.out.println("retrieveDepartmentDivision: " + departmentRepository.retrieveDepartmentDivision(Arrays.asList("Home,Outdoors")));
 
         System.out.println("----------------------EMPLOYEES----------------------");
         System.out.println("findByEmail: " + employeeRepository.findByEmail("bmanueau0@dion.ne.jp"));
