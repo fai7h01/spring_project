@@ -1,5 +1,6 @@
 package com.cydeo;
 
+import com.cydeo.repository.CourseRepository;
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
@@ -14,6 +15,7 @@ public class QueryDemo implements CommandLineRunner {
     private final RegionRepository regionRepository;
     private final DepartmentRepository departmentRepository;
     private final EmployeeRepository employeeRepository;
+    private final CourseRepository courseRepository;
 
     @Override
     public void run(String... args) throws Exception {
@@ -38,7 +40,9 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findBySalaryIsGreaterThan" + employeeRepository.findBySalaryIsGreaterThan(100000));
         System.out.println("findBySalaryIsGreaterThanEqualOrderBySalary: " + employeeRepository.findBySalaryIsGreaterThanEqualOrderBySalary(120000));
         System.out.println("findByEmailIsNull: " + employeeRepository.findByEmailIsNull());
-
         System.out.println("retrieveEmployeeDetail: " + employeeRepository.retrieveEmployeeDetail());
+
+        System.out.println("----------------------COURSES----------------------");
+        System.out.println("findByCategory: " + courseRepository.findByCategory("Spring"));
     }
 }
