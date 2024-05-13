@@ -45,4 +45,42 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
 
     @Query("SELECT e.salary FROM Employee e WHERE e.email = 'mkybbye12@si.edu'")
     Integer retrieveEmployeeSalary();
+
+    //Not Equal
+    @Query("SELECT e FROM Employee e WHERE e.salary <> ?1")
+    List<Employee> retrieveEmployeeSalaryNotEqual(int salary);
+
+    //Like / Contains / StartsWith / EndsWith
+    @Query("SELECT e FROM Employee e WHERE e.firstName LIKE ?1")
+    List<Employee> retrieveEmployeeFirstNameLike(String pattern);
+
+    //Less Than
+    @Query("SELECT e FROM Employee e WHERE e.salary < ?1")
+    List<Employee> retrieveEmployeeSalaryLessThan(int salary);
+
+    //Greater Than
+    @Query("SELECT e.firstName, e.salary FROM Employee e WHERE e.salary > ?1")
+    List<String> retrieveEmployeeSalaryGreaterThan(int salary);
+
+    //Between
+    @Query("SELECT e FROM Employee e WHERE e.salary BETWEEN ?1 AND ?2")
+    List<Employee> retrieveEmployeeSalaryBetween(int from, int end);
+
+    //Before
+    @Query("SELECT e FROM Employee e WHERE e.hireDate < ?1")
+    List<Employee> retrieveEmployeeHireDateBefore(LocalDate date);
+
+    //NULL
+    @Query("SELECT e FROM Employee e WHERE e.email IS NULL")
+    List<Employee> retrieveEmployeeEmailIsNull();
+
+    @Query("SELECT e FROM Employee e WHERE e.email IS NOT NULL")
+    List<Employee> retrieveEmployeeEmailIsNotNull();
+
+    //Sorting
+    @Query("SELECT e FROM Employee e ORDER BY e.salary")
+    List<Employee> retrieveEmployeeSalaryOrderAsc();
+
+    @Query("SELECT e FROM Employee e ORDER BY e.salary DESC")
+    List<Employee> retrieveEmployeeSalaryOrderDesc();
 }
