@@ -3,11 +3,14 @@ package com.cydeo.entity;
 import com.cydeo.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "account_details")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class Account extends BaseEntity{
 
@@ -23,4 +26,17 @@ public class Account extends BaseEntity{
     @OneToOne(mappedBy = "account")
     private User user;
 
+    @Override
+    public String toString() {
+        return "Account{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", age=" + age +
+                ", postalCode='" + postalCode + '\'' +
+                ", role=" + role +
+                '}';
+    }
 }
