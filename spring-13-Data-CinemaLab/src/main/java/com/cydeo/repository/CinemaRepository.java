@@ -4,6 +4,8 @@ import com.cydeo.entity.Cinema;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
@@ -38,6 +40,6 @@ public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
 
     //Write a native query to distinct all cinemas by sponsored name
-
+    List<String> distinctBySponsoredName();
 
 }

@@ -5,25 +5,28 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
     // ------------------- DERIVED QUERIES ------------------- //
 
     //Write a derived query to read a user with an email?
-    List<User> findByEmail(String email);
+    //List<User> findByEmail(String email);
+    Optional<User> findByEmail(String email);
 
     //Write a derived query to read a user with a username?
-    List<User> findByUsername(String username);
+   //List<User> findByUsername(String username);
+    Optional<User> findByUsername(String username);
 
     //Write a derived query to list all users that contain a specific name?
-    List<User> findByAccount_Name(String name);
+    List<User> findAllByAccountNameContaining(String name);
 
     //Write a derived query to list all users that contain a specific name in the ignore case mode?
     List<User> findByUsernameContainsIgnoreCase(String pattern);
 
     //Write a derived query to list all users with an age greater than a specified age?
-
+    List<User> findAllByAccountAgeGreaterThan(Integer age);
 
     // ------------------- JPQL QUERIES ------------------- //
 
