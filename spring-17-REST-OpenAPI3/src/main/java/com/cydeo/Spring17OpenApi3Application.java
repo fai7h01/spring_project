@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Bean;
 import java.util.List;
 
 @SpringBootApplication
-public class Spring18OpenApi3Application {
+public class Spring17OpenApi3Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Spring18OpenApi3Application.class, args);
+        SpringApplication.run(Spring17OpenApi3Application.class, args);
     }
 
     @Bean

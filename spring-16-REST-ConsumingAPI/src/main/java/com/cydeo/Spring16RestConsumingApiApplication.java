@@ -9,10 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableFeignClients
-public class Spring17RestConsumingApiApplication {
+public class Spring16RestConsumingApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Spring17RestConsumingApiApplication.class, args);
+        SpringApplication.run(Spring16RestConsumingApiApplication.class, args);
     }
 
     @Bean
