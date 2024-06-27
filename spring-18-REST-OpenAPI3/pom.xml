@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cydeo</groupId>
-    <artifactId>spring-18-REST-OpenApi3</artifactId>
+    <artifactId>spring-18-REST-OpenAPI3</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-18-OpenApi3</name>
     <description>spring-18-OpenApi3</description>
