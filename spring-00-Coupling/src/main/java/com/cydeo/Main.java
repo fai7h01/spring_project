@@ -1,5 +1,6 @@
-package com.cydeo.loosely_coupled;
+package com.cydeo;
 
+import com.cydeo.loosely_coupled.PC;
 import com.cydeo.loosely_coupled.caseFactory.Case;
 import com.cydeo.loosely_coupled.caseFactory.DellCase;
 import com.cydeo.loosely_coupled.monitorFactory.AcerMonitor;
