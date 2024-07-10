@@ -27,12 +27,24 @@ public class LoggingAspect {
 //    public void log(){
 //        logger.info("Info log.........");
 //    }
+//
+//    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
+//    public void courseRepositoryFindByIdPC(){};
+//
+//    @Before("courseRepositoryFindByIdPC()")
+//    public void beforeCourseRepositoryFindById(JoinPoint joinPoint){
+//        logger.info("Before -> Method: {}, Arguments: {}, Target: {}",
+//                joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
+//    }
 
-    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
-    public void courseRepositoryFindByIdPC(){};
+    @Pointcut("within(com.cydeo.controller..*)")
+    public void anyControllerOperation() {};
 
-    @Before("courseRepositoryFindByIdPC()")
-    public void beforeCourseRepositoryFindById(JoinPoint joinPoint){
+    @Pointcut("@within(org.springframework.stereotype.Service)")
+    public void anyServiceOperation() {};
+
+    @Before("anyControllerOperation() || anyServiceOperation()")
+    public void beforeControllerOrServiceAdvice(JoinPoint joinPoint){
         logger.info("Before -> Method: {}, Arguments: {}, Target: {}",
                 joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
     }
