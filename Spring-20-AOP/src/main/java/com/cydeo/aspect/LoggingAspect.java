@@ -48,13 +48,23 @@ public class LoggingAspect {
 //        logger.info("Before -> Method: {}, Arguments: {}, Target: {}",
 //                joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
 //    }
+//
+//    @Pointcut("@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
+//    public void anyDeleteControllerOperation() {};
+//
+//    @Before("anyDeleteControllerOperation()")
+//    public void beforeDeleteMappingAnnotation(JoinPoint joinPoint){
+//                logger.info("Before -> Method: {}, Arguments: {}, Target: {}",
+//                joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
+//    }
 
-    @Pointcut("@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
-    public void anyDeleteControllerOperation() {};
+    @Pointcut("@annotation(com.cydeo.annotation.LoggingAnnotation)")
+    public void loggingAnnotationPC() {};
 
-    @Before("anyDeleteControllerOperation()")
-    public void beforeDeleteMappingAnnotation(JoinPoint joinPoint){
+    @Before("loggingAnnotationPC()")
+    public void beforeLoggingAnnotation(JoinPoint joinPoint){
                 logger.info("Before -> Method: {}, Arguments: {}, Target: {}",
                 joinPoint.getSignature(), joinPoint.getArgs(), joinPoint.getTarget());
     }
+
 }
