@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cydeo</groupId>
-    <artifactId>Spring-20-AOP</artifactId>
+    <artifactId>spring-20-AOP</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Spring-20-AOP</name>
     <description>Spring-20-AOP</description>
