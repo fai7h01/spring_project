@@ -8,4 +8,11 @@ public class Calculator {
         return a + b;
     }
 
+    public static int add2(int a, int b){
+        if (a > b){
+            throw new IllegalArgumentException("My Exception");
+        }
+        return a + b;
+    }
+
 }
